@@ -91,7 +91,7 @@
             <h1 class="text-[#1F2937] text-4xl mb-10 text-center font-bold">Choose Your Trees</h1>
 
             <!-- Larger Grid BOX  -->
-            <div class="flex justify-between items-center gap-7">
+            <div class="grid grid-cols-1  lg:grid-cols-6 gap-7">
 
                 <!-- All Categories -->
                 <div class="">
@@ -103,32 +103,53 @@
                 </div>
 
                 <!-- All Cards  -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:col-span-4">
 
                     <!-- Each Cards/ Single Cards -->
-                    <div>
-                        <div class="card bg-base-100 shadow-sm p-4">
-                            <figure class="">
-                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                    alt="Shoes" class="rounded-lg" />
-                            </figure>
-                            <div class="">
-                                <h2 class="card-title mt-4 text-[#1F2937] font-semibold">Card Title</h2>
-                                <p class="my-2 text-[#1F2937] ">A card component has a figure, a body part, and inside body there are
-                                    title and
-                                    actions parts</p>
-                                <div class="mb-3 flex justify-between items-center">
-                                    <p class="text-[#15803D] bg-[#DCFCE7] px-5 py-3 rounded-3xl font-semibold">Fruit Tree</p>
-                                    <p class="text-[#1F2937] font-semibold">৳<span>500</span></p>
-                                </div>
-                                <button class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
+
+                    <div class="card bg-base-100 shadow-sm p-4">
+                        <figure class="">
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" class="rounded-lg" />
+                        </figure>
+                        <div class="">
+                            <h2 class="card-title mt-4 text-[#1F2937] font-semibold">Card Title</h2>
+                            <p class="my-2 text-[#1F2937] text-[12px] text-justify">A card component has a figure, a
+                                body part, and inside
+                                body there are
+                                title and
+                                actions parts</p>
+                            <div class="mb-3 flex justify-between items-center">
+                                <p
+                                    class="text-[#15803D] bg-[#DCFCE7] px-2 py-2 xl:px-5 xl:py-3 rounded-3xl font-semibold text-[14px]">
+                                    Fruit
+                                    Tree</p>
+                                <p class="text-[#1F2937] font-semibold text-[14px]">৳<span>500</span></p>
                             </div>
+                            <button class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="">
+                <!-- Card Counts  -->
+                <div>
+                    <div class="h-full p-4 bg-white rounded-xl ">
+                        <h2 class="text-xl font-bold mb-4">Your Cart</h2>
+                        <div class="cart-list-container">
 
+                            <!-- single Count card  -->
+                            <div class="flex justify-between items-center bg-[#F0FDF4] px-3 py-2 mb-3">
+                                <div>
+                                    <h3 class="font-semibold">Mango Tree</h3>
+                                    <p class="">৳500 x 1</p>
+                                </div>
+                                <button><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
