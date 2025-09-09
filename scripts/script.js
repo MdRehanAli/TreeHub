@@ -115,6 +115,13 @@ const displayPlants = (plantsAll) => {
                 e.target.closest('.cart-item').remove();
             })
 
+            // Total Price Function
+            // const price = parseInt(document.getElementById('totalPrice')).innerText;
+            // console.log(price)
+            // const totalPrice = price;
+
+            // document.getElementById('totalPrice').innerText = totalPrice;
+
         })
 
     });
