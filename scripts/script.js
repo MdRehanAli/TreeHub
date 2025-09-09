@@ -99,6 +99,7 @@ const displayPlants = (plantsAll) => {
             const cartListContainer = document.getElementById('cart-list-container');
             const div = document.createElement("div");
             // console.log(div);
+            div.classList.add("cart-item");
             div.innerHTML = `
         <div class="flex justify-between items-center bg-[#F0FDF4] px-3 py-2 mb-3">
                             <div>
@@ -110,6 +111,9 @@ const displayPlants = (plantsAll) => {
         `
             cartListContainer.appendChild(div);
 
+            document.getElementById(`removeList${plants.id}`).addEventListener('click', function (e) {
+                e.target.closest('.cart-item').remove();
+            })
 
         })
 
@@ -176,6 +180,7 @@ const disAllPlants = (plantsAll) => {
             const cartListContainer = document.getElementById('cart-list-container');
             const div = document.createElement("div");
             // console.log(div);
+            div.classList.add("cart-item");
             div.innerHTML = `
         <div class="flex justify-between items-center bg-[#F0FDF4] px-3 py-2 mb-3">
                             <div>
@@ -187,17 +192,15 @@ const disAllPlants = (plantsAll) => {
         `
             cartListContainer.appendChild(div);
 
+            document.getElementById(`removeList${plants.id}`).addEventListener('click', function (e) {
+                e.target.closest('.cart-item').remove();
+            })
 
         })
-
-     
-
     });
-
 
     loadingSpinner(false);
 }
-
 
 
 // Calling All Plants data 
