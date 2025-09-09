@@ -87,10 +87,32 @@ const displayPlants = (plantsAll) => {
                                     class="text-[#15803D] bg-[#DCFCE7] px-2 py-2 xl:px-5 xl:py-3 rounded-3xl font-semibold text-[14px]">${plants.category}</p>
                                 <p class="text-[#1F2937] font-semibold text-[14px]">৳<span>${plants.price}</span></p>
                             </div>
-                            <button class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
+                            <button id="add-to-cart-${plants.id}" onclick="addToCart(${plants.id})" class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
                         </div>
         `;
         allPlants.append(plantCard);
+
+
+        // Add to cart Features 
+        document.getElementById(`add-to-cart-${plants.id}`).addEventListener('click', function () {
+
+            const cartListContainer = document.getElementById('cart-list-container');
+            const div = document.createElement("div");
+            // console.log(div);
+            div.innerHTML = `
+        <div class="flex justify-between items-center bg-[#F0FDF4] px-3 py-2 mb-3">
+                            <div>
+                                <h3 class="font-semibold">${plants.name}</h3>
+                                <p class="">৳<span id="price">${plants.price}</span> x 1</p>
+                            </div>
+                            <button id="removeList${plants.id}" ><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+        `
+            cartListContainer.appendChild(div);
+
+
+        })
+
     });
 
     loadingSpinner(false);
@@ -143,14 +165,38 @@ const disAllPlants = (plantsAll) => {
                                     class="text-[#15803D] bg-[#DCFCE7] px-2 py-2 xl:px-5 xl:py-3 rounded-3xl font-semibold text-[14px]">${plants.category}</p>
                                 <p class="text-[#1F2937] font-semibold text-[14px]">৳<span>${plants.price}</span></p>
                             </div>
-                            <button class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
+                            <button id="add-to-cart-${plants.id}" class="btn bg-[#15803D] w-full rounded-3xl text-white">Add to Cart</button>
                         </div>
         `;
         allPlants.append(plantCard);
+
+        // Add to cart Features 
+        document.getElementById(`add-to-cart-${plants.id}`).addEventListener('click', function () {
+
+            const cartListContainer = document.getElementById('cart-list-container');
+            const div = document.createElement("div");
+            // console.log(div);
+            div.innerHTML = `
+        <div class="flex justify-between items-center bg-[#F0FDF4] px-3 py-2 mb-3">
+                            <div>
+                                <h3 class="font-semibold">${plants.name}</h3>
+                                <p class="">৳<span id="price">${plants.price}</span> x 1</p>
+                            </div>
+                            <button  id="removeList${plants.id}" ><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+        `
+            cartListContainer.appendChild(div);
+
+
+        })
+
+     
+
     });
+
+
     loadingSpinner(false);
 }
-
 
 
 
