@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Google Fonts Classes */
+* {
+    font-family: "Inter", sans-serif;
+}
