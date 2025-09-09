@@ -106,7 +106,7 @@ const displayPlants = (plantsAll) => {
                                 <h3 class="font-semibold">${plants.name}</h3>
                                 <p class="">৳<span id="price">${plants.price}</span> x 1</p>
                             </div>
-                            <button id="removeList${plants.id}" ><i class="fa-solid fa-xmark"></i></button>
+                            <button id="removeList${plants.id}" ><i class="fa-solid fa-xmark text-red-500 p-3 rounded-sm bg-gray-200"></i></button>
                         </div>
         `
             cartListContainer.appendChild(div);
@@ -187,7 +187,7 @@ const disAllPlants = (plantsAll) => {
                                 <h3 class="font-semibold">${plants.name}</h3>
                                 <p class="">৳<span id="price">${plants.price}</span> x 1</p>
                             </div>
-                            <button  id="removeList${plants.id}" ><i class="fa-solid fa-xmark"></i></button>
+                            <button  id="removeList${plants.id}" ><i class="fa-solid fa-xmark text-red-500 p-3 rounded-sm bg-gray-200"></i></button>
                         </div>
         `
             cartListContainer.appendChild(div);
